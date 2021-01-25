@@ -1,24 +1,3 @@
-
-### Commands used:
-
-#### (1) creating project:
-npx create-react-app diaries-app --template typescript
-
-#### (2) installing redux and toolkit:
-npm install --save redux react-redux @reduxjs/toolkit
-
-#### (3)  installing more libraries:
-npm install --save axios react-router-dom react-hook-form yup dayjs markdown-to-jsx sweetalert2
-
-#### (4) installing types of libraries:
-npm install --save-dev miragejs @types/react-redux @types/react-router-dom @types/yup @types/markdown-to-jsx
-
-#### (5) installing types of react // fixing error
-npm install -D @types/react
-
-### Commands End.
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
