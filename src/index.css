@@ -1,0 +1,11 @@
+#root {
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-family: sans-serif;
+    color: rgb(50, 64, 65);
+}
+
+#root > * {
+    width: 100%;
+}

@@ -1,0 +1,10 @@
+.app {
+    margin: 0 5%;
+    padding: 5% 10%;
+    box-shadow: 0 5px 10px black;
+    float: 1;
+}
+
+hr {
+    border-color: #3f51b5;
+}
