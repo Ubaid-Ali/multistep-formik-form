@@ -25,7 +25,8 @@ interface propsInterface {
 
 
 const Step1: React.FC<propsInterface> = ({ prevValues, setUserValues, setCurrentStep }) => {
-
+    
+    const phoneRegExp = /^\(?([0-9]{4})\)?[-. ]?([0-9]{7})$/
     const initialVal = {
         contact: prevValues?.contact || "",
         address: prevValues?.address || "",
@@ -33,7 +34,9 @@ const Step1: React.FC<propsInterface> = ({ prevValues, setUserValues, setCurrent
     };
 
     const schema = object({
-        contact: string().required().min(10).max(20),
+        contact: string()
+            .matches(phoneRegExp, "format example = 0000-0000000")
+            .required().min(11),
         address: string().required().min(5).max(40),
         description: string().required().min(2).max(30),
     });
@@ -53,7 +56,7 @@ const Step1: React.FC<propsInterface> = ({ prevValues, setUserValues, setCurrent
             >
                 <Form>
                     <Box paddingBottom={2}>
-                        <Field type="text" name="contact" fullWidth as={TextField} label="Contact:" />
+                        <Field type="text" name="contact" fullWidth as={TextField} label="Contact / Cell:" />
                         <span className="error"><ErrorMessage name="contact" /></span>
                     </Box>
 
